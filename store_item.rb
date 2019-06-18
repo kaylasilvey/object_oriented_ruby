@@ -1,4 +1,4 @@
-# "JavaScript" syntax
+# "JavaScript" syntax:
 
 produce1 = { produce: "potato", type: "yukon", price: 0.79, organic: false, per_lb: true}
 produce2 = { produce: "apple", type: "gala", price: 1.29, organic: true, per_lb: false}
@@ -6,7 +6,7 @@ produce3 = { produce: "cabbage", type: "napa", price: 0.99, organic: false, per_
 
 puts "#{produce1[:type]} #{produce1[:produce]}s are on sale for #{produce1[:price]}."
 
-# "Ruby" syntax
+# "Ruby" syntax:
 
 produce1 = { :produce => "onion", :type => "red", :price => 0.75, :organic => false, :per_lb => true}
 produce2 = { :produce => "lettuce", :type => "romaine", :price => 1.99, :organic => true, :per_lb => false}
@@ -14,9 +14,12 @@ produce3 = { :produce => "mushrooms", :type => "crimini", :price => 4.99, :organ
 
 puts "#{produce1[:type]} #{produce1[:produce]}s are on sale for #{produce1[:price]}."
 
-# Usinging instances of a class
+# Using instances of a class:
 
 class Produce
+  attr_reader :produce, :type, :price, :organic, :input_per_lb
+  attr_writer :price, :organic
+
   def initialize(input_produce, input_type, input_price, input_organic, input_per_lb)
     @produce = input_produce
     @type = input_type
