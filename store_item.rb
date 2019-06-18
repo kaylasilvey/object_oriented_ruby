@@ -1,16 +1,16 @@
 # "JavaScript" syntax:
 
-produce1 = { produce: "potato", type: "yukon", price: 0.79, organic: false, per_lb: true}
-produce2 = { produce: "apple", type: "gala", price: 1.29, organic: true, per_lb: false}
-produce3 = { produce: "cabbage", type: "napa", price: 0.99, organic: false, per_lb: true}
+produce1 = { produce: "potato", type: "yukon", price: 0.79, organic: false, per_lb: true }
+produce2 = { produce: "apple", type: "gala", price: 1.29, organic: true, per_lb: false }
+produce3 = { produce: "cabbage", type: "napa", price: 0.99, organic: false, per_lb: true }
 
 puts "#{produce1[:type]} #{produce1[:produce]}s are on sale for #{produce1[:price]}."
 
 # "Ruby" syntax:
 
-produce1 = { :produce => "onion", :type => "red", :price => 0.75, :organic => false, :per_lb => true}
-produce2 = { :produce => "lettuce", :type => "romaine", :price => 1.99, :organic => true, :per_lb => false}
-produce3 = { :produce => "mushrooms", :type => "crimini", :price => 4.99, :organic => false, :per_lb => true}
+produce1 = { :produce => "onion", :type => "red", :price => 0.75, :organic => false, :per_lb => true }
+produce2 = { :produce => "lettuce", :type => "romaine", :price => 1.99, :organic => true, :per_lb => false }
+produce3 = { :produce => "mushrooms", :type => "crimini", :price => 4.99, :organic => false, :per_lb => true }
 
 puts "#{produce1[:type]} #{produce1[:produce]}s are on sale for #{produce1[:price]}."
 
@@ -33,13 +33,13 @@ class Produce
   end
 end
 
-produce1 = Produce.new({produce: "onion", type: "red", price: 0.75, organic: false, per_lb: true})
-produce2 = Produce.new({produce: "lettuce", type: "romaine", price: 1.99, organic: true, per_lb: false})
+produce1 = Produce.new({ produce: "onion", type: "red", price: 0.75, organic: false, per_lb: true })
+produce2 = Produce.new({ produce: "lettuce", type: "romaine", price: 1.99, organic: true, per_lb: false })
 
 produce1.print_info
 produce2.print_info
 
-produce1.price=(1.50)
+produce1.price = (1.50)
 produce1.print_info
 
 puts produce2.price
