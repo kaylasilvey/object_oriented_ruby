@@ -28,34 +28,6 @@ class Produce
     @per_lb = input_per_lb
   end
 
-  def produce
-    return @produce
-  end
-
-  def type
-    return @type
-  end
-
-  def price
-    return @price
-  end
-
-  def edit_price(input_price)
-    @price = input_price
-  end
-
-  def organic
-    return @organic
-  end
-
-  def change_organic(input_organic)
-    @organic = input_organic
-  end
-
-  def per_lb
-    return @per_lb
-  end
-
   def print_info
     puts "#{@type} #{@produce}s are on sale for #{@price}."
   end
@@ -67,7 +39,7 @@ produce2 = Produce.new("lettuce", "romaine", "1.99", "true", "false")
 produce1.print_info
 produce2.print_info
 
-produce1.edit_price(1.50)
+produce1.price=(1.50)
 produce1.print_info
 
 puts produce2.price
