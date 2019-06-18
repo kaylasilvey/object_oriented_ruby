@@ -20,12 +20,12 @@ class Produce
   attr_reader :produce, :type, :price, :organic, :input_per_lb
   attr_writer :price, :organic
 
-  def initialize(input_produce, input_type, input_price, input_organic, input_per_lb)
-    @produce = input_produce
-    @type = input_type
-    @price = input_price
-    @organic = input_organic
-    @per_lb = input_per_lb
+  def initialize(hash_input)
+    @produce = hash_input[:produce]
+    @type = hash_input[:type]
+    @price = hash_input[:price]
+    @organic = hash_input[:organic]
+    @per_lb = hash_input[:per_lb]
   end
 
   def print_info
@@ -33,8 +33,8 @@ class Produce
   end
 end
 
-produce1 = Produce.new("onion", "red", "0.75", "false", "true")
-produce2 = Produce.new("lettuce", "romaine", "1.99", "true", "false")
+produce1 = Produce.new({produce: "onion", type: "red", price: 0.75, organic: false, per_lb: true})
+produce2 = Produce.new({produce: "lettuce", type: "romaine", price: 1.99, organic: true, per_lb: false})
 
 produce1.print_info
 produce2.print_info
