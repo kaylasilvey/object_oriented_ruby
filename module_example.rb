@@ -1,4 +1,4 @@
-module Controlable
+module Controllable
   def initialize
     @speed = 0
     @direction = "north"
@@ -18,7 +18,7 @@ module Controlable
 end
 
 class Car
-  include Controlable
+  include Controllable
 
   def honk_horn
     puts "Beeeeeeep!"
@@ -26,7 +26,7 @@ class Car
 end
 
 class Bike
-  include Controlable
+  include Controllable
 
   def ring_bell
     puts "Ring ring!"
