@@ -33,6 +33,16 @@ class Produce
   end
 end
 
+class Food < Produce
+  attr_reader :shelf_life
+  attr_writer :shelf_life
+
+  def shelf_life(date)
+    @shelf_life = date
+    puts @shelf_life
+  end
+end
+
 produce1 = Produce.new({ produce: "onion", type: "red", price: 0.75, organic: false, per_lb: true })
 produce2 = Produce.new({ produce: "lettuce", type: "romaine", price: 1.99, organic: true, per_lb: false })
 
