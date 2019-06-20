@@ -15,6 +15,12 @@ produce3 = { :produce => "mushrooms", :type => "crimini", :price => 4.99, :organ
 puts "#{produce1[:type]} #{produce1[:produce]}s are on sale for #{produce1[:price]}."
 
 # Using instances of a class:
+module Donateable
+  def donate
+    @donate = true
+    puts @donate
+  end
+end
 
 class Produce
   attr_reader :produce, :type, :price, :organic, :input_per_lb
@@ -34,6 +40,7 @@ class Produce
 end
 
 class Food < Produce
+  include Donateable
   attr_reader :shelf_life
   attr_writer :shelf_life
 
